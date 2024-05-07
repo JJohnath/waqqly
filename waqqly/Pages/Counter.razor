@@ -1,12 +1,62 @@
 ﻿@page "/counter"
 
-<PageTitle>Register Pet</PageTitle>
+<PageTitle>Register Dog</PageTitle>
 
 <h1>Register a Dog!</h1>
 
 <p role="status">Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+
+<div>
+    <label for="dname">Dogs Name: </label>
+    <input type="text" id="dname" name="dname" placeholder="Tux" required>
+</div>
+
+<br>
+
+<div>
+    <label for="temperament">Dog's Temperament :</label>
+
+    <label for="Friendly">Friendly</label>
+    <input type="radio" id="Friendly" name="temperament" value="Friendly">
+
+    <label for="Neutral">Neutral </label>
+    <input type="radio" id="Neutral" name="temperament" value="Neutral">
+
+    <label for="Agressive">Agressive</label>
+    <input type="radio" id="Agressive" name="temperament" value="Agressive">
+</div>
+
+<br>
+
+<div>
+    <label for="oname">Owner's Name: </label>
+    <input type="text" id="lname" name="lname" placeholder="Squarepants" required>
+</div>
+
+<br>
+
+
+<div>
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com">
+</div>
+
+<br>
+
+<div>
+    <label for="phone">Phone Number: </label>
+    <input type="tel" id="phone" name="phone" placeholder="07473829295">
+</div>
+
+<br>
+
+<div>
+    <input type="submit">
+</div>
+
 
 @code {
     private int currentCount = 0;
