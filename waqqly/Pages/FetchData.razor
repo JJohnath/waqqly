@@ -1,47 +1,58 @@
-﻿@page "/fetchdata"
+﻿@page "/register-walker"
 @using waqqly.Data
-@inject WeatherForecastService ForecastService
 
 <PageTitle>Register as a walker!</PageTitle>
 
 <h1>Register as a walker!</h1>
 
-<p>This component demonstrates fetching data from a service.</p>
+<p>Apply to be a walker with us!</p>
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<div>
+    <label for="title">Title :</label>
 
-@code {
-    private WeatherForecast[]? forecasts;
+    <label for="Mr">Mr</label>
+    <input type="radio" id="Mr" name="title" value="Mr">
 
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
-    }
-}
+    <label for="Mrs">Mrs </label>
+    <input type="radio" id="Mrs" name="title" value="Mrs">
+
+</div>
+
+<br>
+
+<div>
+    <label for="fname">First Name: </label>
+    <input type="text" id="fname" name="fname" placeholder="John" required>
+</div>
+
+
+<br>
+
+<div>
+    <label for="lname">Last Name: </label>
+    <input type="text" id="lname" name="lname" placeholder="doe" required>
+</div>
+
+
+<br>
+
+
+<div>
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+</div>
+
+<br>
+
+<div>
+    <label for="phone">Phone Number: </label>
+    <input type="tel" id="phone" name="phone" placeholder="07473829295">
+</div>
+
+<br>
+
+
+<div>
+    <input type="submit">
+</div>
+

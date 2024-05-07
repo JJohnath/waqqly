@@ -1,12 +1,11 @@
-﻿@page "/counter"
+﻿@page "/register-dog"
 
 <PageTitle>Register Dog</PageTitle>
 
 <h1>Register a Dog!</h1>
 
-<p role="status">Current count: @currentCount</p>
+<p1> Please fill out the form to register your dog for our walking services!</p1>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 
 <div>
@@ -33,7 +32,7 @@
 
 <div>
     <label for="oname">Owner's Name: </label>
-    <input type="text" id="lname" name="lname" placeholder="Squarepants" required>
+    <input type="text" id="oname" name="oname" placeholder="John" required>
 </div>
 
 <br>
@@ -57,12 +56,3 @@
     <input type="submit">
 </div>
 
-
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
